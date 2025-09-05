@@ -1,0 +1,44 @@
+.sidenav {
+    height: 100%;
+    width: 250px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black ; 
+    padding-top: 20px;
+    overflow-y: auto; 
+}
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block; 
+}
+.main {
+   margin-left: 250px; /* Same as the width of the sidenav */
+   position: relative;
+   z-index: 0;
+   padding: 20px;
+}
+.dropdownbtn {
+    background-color: #007fff; 
+    color: white; 
+    padding: 10px 15px; 
+    font-size: 18px; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+    text-align: left;  
+}
+.dropdownbtncontainer { 
+   max-height: 0;
+   overflow: hidden;
+    transition: max-height 0.3s ease; 
+    display: none; 
+    background-color: #007fff;   
+}
+.dropdownbtncontainer.show {
+    max-height: 500px; 
+    display: block; 
+}
