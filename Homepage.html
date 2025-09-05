@@ -8,10 +8,11 @@
  </head>
  <body> 
     <div id="sidenav" class="sidenav"> <!-- Changed class to id for unique identification -->
-        <a href="#" onclick="loadContent('homepage')">Homepage</a> <!-- # means stay on this page-->
+        <a href="#" onclick="loadContent('homepage')">Homepage</a> <!-- # means stay on this page and connect it to the
+         function that will help the button to fonction correctly -->
 
-        <button class="dropdownbtn">Short Courses </button>
-        <div class="dropdownbtncontainer" >
+        <button class="dropdownbtn">Short Courses </button> <!-- Giving an id for the dropdown button -->
+        <div class="dropdownbtncontainer" > <!-- Giving an id for the dropdown container , container that will hold the list of courses -->
             <a href="#" onclick="loadContent('cooking')">Cooking</a> 
         </div>  
         
@@ -26,16 +27,16 @@
         <p>Your gateway to knowledge and skills development.</p>
     </div>
 
-    <script>
+    <script> <!-- Script to make the dropdown buttons work -->
        const dropdownButtons = document.querySelectorAll('.dropdownbtn');
        dropdownButtons.forEach(button => { 
         button.addEventListener('click', () => {
             const dropdown = button.nextElementSibling;
             dropdown.classList.toggle('show');
         } 
-       )});  
-
-       function loadContent(section) {
+       )}); 
+        
+       function loadContent(section) { //<!--Function to load content based on the button clicked --> 
   let content = ''; 
 
   if (section === 'homepage') { 
